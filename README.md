@@ -1,6 +1,6 @@
 # Universal responsive JavaScript slider tutorial
-How to buil simple, easy and universal JavaScript slider for [Alex Devero Blog](http://blog.alexdevero.com/).
+Code for How to buil simple, easy and universal JavaScript slider tutorial on [Alex Devero Blog](http://blog.alexdevero.com/).
 
 ## Links:
 - Live demo on [CodePen](http://codepen.io/alexdevero/pen/jVmXXe)
-- Tutorial on [Alex Devero Blog](http://blog.alexdevero.com/)
+- Tutorial on [Alex Devero Blog](http://blog.alexdevero.com/simple-easy-universal-javascript-slider/)
