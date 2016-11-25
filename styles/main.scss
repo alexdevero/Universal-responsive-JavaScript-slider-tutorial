@@ -1,0 +1,102 @@
+// Function
+@function remy($value, $base: 16px) {
+  @return ($value / $base) * 1rem;
+}
+
+/* Animation for fading slides */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Base */
+html {
+  font-size: 16px;
+}
+
+body {
+  padding-top: 16px;// add some space above the slider
+  font-family: 'Montserrat', arial, sans-serif;
+  font-size: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.slider-container {
+  padding: remy(16px);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: remy(480px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .15), 0 4px 16px rgba(0, 0, 0, .05);
+}
+
+.slider-list {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: remy(250px);
+}
+
+.slider-slide img {
+  max-width: 100%;
+}
+
+.slider-slide-hidden {
+  display: none;
+}
+
+.slider-slide-active {
+  display: block;
+  animation: fadeIn .85s ease-in-out;
+}
+
+.slider-controlls {
+  position: relative;
+  margin-top: remy(16px);
+  text-align: center;
+  
+  /* Clearfix for floated items */
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  
+  &:after {
+    clear: both;
+  }
+
+  li {
+    list-style-type: none;
+    
+    &:first-of-type {
+      float: left;
+    }
+    
+    &:last-of-type {
+      float: right;
+    }
+  }
+  
+  a {
+    $color: #233142;
+    
+    padding: 8px 15px;
+    color: $color;
+    text-decoration: none;
+    transition: color .25s ease-in-out;
+    
+    &:focus,
+    &:hover {
+      color: lighten($color, 25%);
+    }
+  }
+}
